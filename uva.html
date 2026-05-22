@@ -1,0 +1,475 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UVA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@500&family=Syne:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles2.css" />
+  </head>
+  <body>
+    <div class="custom-cursor" id="customCursor"></div>
+    <!-- MAIN NAV -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="assets\beeulah-logo.svg" alt="logo" />
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="index.html#works" class="nav-link active">Selected Work</a></li>
+    <li><a href="index.html#career" class="nav-link">Experience</a></li>
+    <li><a href="index.html#about" class="nav-link">About</a></li>
+    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+    <li><a href="#" class="nav-resume">Resume</a></li>
+  </ul>
+
+  <button class="nav-hamburger" id="navHamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="nav-drawer" id="navDrawer">
+  <button class="nav-drawer-close" id="navDrawerClose">✕</button>
+
+  <ul class="nav-drawer-links">
+    <li><a href="index.html#works">Selected Work</a></li>
+    <li><a href="index.html#career">Experience</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</div>
+
+    <aside class="case-toc" aria-label="On this page">
+  <div class="case-toc-header">
+    <h3 class="case-toc-project">UVA</h3>
+    <p class="case-toc-title">On this page</p>
+  </div>
+
+  <nav class="case-toc-nav">
+    <a class="case-toc-link is-active" href="#overview">Overview</a>
+    <a class="case-toc-link" href="#problem">Problem</a>
+    <a class="case-toc-link" href="#research">Solution</a>
+
+    <!-- <div class="case-toc-sub">
+      <a class="case-toc-link case-toc-child" href="#process">Design Decision</a>
+      <a class="case-toc-link case-toc-child" href="#prototype">prototype</a>
+    </div> -->
+
+    <a class="case-toc-link" href="#redesign">Design Decisions</a>
+    <a class="case-toc-link" href="#physical">Outcome & Reflection</a>
+    
+  </nav>
+</aside>
+    <main class="case-study uva-case">
+      
+
+      <header class="hero shell" id="overview">
+        <p class="eyebrow"><span></span> End-to-end product design · Android app · Instrumentation </p>
+        <h1>Pilabz UVA</h1>
+        <p class="lede">
+          UVA is a wireless electrical measurement instrument that combines DMM, LCR, 1-phase PQA, and 3-phase PQA into one device. Instead of placing the screen on the hardware, UVA moves the measurement interface to an Android phone or tablet.
+        </p>
+        <p class="lede">
+          As the only designer on the product, I owned the core app experience from research to final UI, and also extended the design language into supporting deliverables like brochure and packaging labels for beta release.
+        </p>
+
+        <dl class="project-meta">
+          <div>
+  <dt>Role</dt>
+  <dd>
+    UI/UX Designer
+    <span class="role-subtext">Sole designer · Research to handoff</span>
+  </dd>
+</div>
+          <div>
+            <dt>Deliverables</dt>
+            <dd> Research · App UI · Supporting collaterals</dd>
+          </div>
+          <div>
+            <dt>Platform</dt>
+            <dd>Android · Landscape · Dark theme</dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd>Final testing · Beta release upcoming</dd>
+          </div>
+        </dl>
+      </header>
+
+      <section class="section shell" id="overview-content">
+        <p class="section-kicker">01 — Overview</p>
+        <h2>One device. Four instruments. One app experience.</h2>
+        <p>
+          UVA brought four electrical measurement tools into one wireless product. Each instrument had different readings, parameters, graphs, connection needs, and save behaviours.
+          The challenge was to make the app feel like one unified product, not four different apps placed inside one interface.
+        </p>
+      </section>
+
+      <section class="section shell" id="problem">
+  <p class="section-kicker">02 — Problem</p>
+
+  <h2>Complex measurement workflows on a small mobile screen</h2>
+
+  <p>
+    Traditional measurement instruments usually have built-in screens and physical controls.
+    UVA removed the screen from the hardware and shifted the interaction to a mobile device.
+  </p>
+
+  <p>That created three UX problems:</p>
+
+  <div class="problem-table">
+    <div class="problem-table-head">Problem</div>
+    <div class="problem-table-head">Why it mattered</div>
+
+    <div>Four instruments had different workflows</div>
+    <div>Users should not relearn the app every time they switch modes</div>
+
+    <div>Wrong probe setup could lead to no reading or wrong readings</div>
+    <div>Users needed guidance before and during measurement</div>
+
+    <div>Landscape keyboard could cover live data</div>
+    <div>Active measurement should not be interrupted by typing</div>
+  </div>
+</section>
+
+      <section class="section shell" id="research">
+        <p class="section-kicker">03 — Solution</p>
+        <h2>A consistent measurement system for every instrument</h2>
+        <p>
+          I designed a shared app structure that worked across all four instruments:
+        </p>
+        <div class="solution-flow" aria-label="UVA app measurement flow">
+  <div class="flow-step">Connect<br />device</div>
+  <div class="flow-step">Select<br />instrument</div>
+  <div class="flow-step">Confirm<br />probe setup</div>
+  <div class="flow-step">View<br />reading</div>
+  <div class="flow-step">Save<br />value</div>
+  <div class="flow-step">Review<br />logs</div>
+</div>
+        <p>
+          The content changed based on the selected instrument, but the layout logic stayed consistent.
+        </p>
+        
+    <section class="media-strip shell" id="process">
+        <div class="wide-composite rebrand">
+          <div>
+            <img src="assets\uva\sketches.svg" alt="UVA early sketches" />
+            <p class="caption">First scribbles on paper - instruments, layouts, and reading hierarchies.</p>
+          </div>
+          <div class="stacked-ui">
+  <img src="assets\uva\uva-combined.svg" alt="UVA app interface screens" />
+  <p class="caption">Full rebrand from Karuvi to Pilabz - every screen updated from tokens.</p>
+</div>
+        </div>
+      </section>    
+      </section>
+
+      <section class="section shell" id="redesign">
+  <p class="section-kicker">04 — Design decisions</p>
+  <h2>Four choices that shaped the measurement experience</h2>
+
+  <div class="choice-list">
+    <article class="choice-card">
+      <div class="choice-body">
+        <span class="dot"></span>
+        <div>
+          <h3>Designed for physical-task attention, not desk attention</h3>
+
+          <p>
+            The interface was designed for users who are working around real electrical equipment, not calmly analysing a dashboard at a desk.
+          </p>
+
+          <p>
+            That changed the priorities: the primary reading had to stay dominant, actions had to be reachable, and supporting values had to remain visible without forcing close inspection. The UI needed to support divided attention between the device, probes, equipment, and screen.
+          </p>
+        </div>
+      </div>
+
+      <div class="choice-note muted">
+        <b>Rejected</b>
+        <p>
+          A dense engineering interface optimised for someone sitting still and reading every value carefully.
+        </p>
+      </div>
+    </article>
+
+    <article class="choice-card">
+      <div class="choice-body">
+        <span class="dot"></span>
+        <div>
+          <h3>Designed the app as an extension of the instrument</h3>
+
+          <p>
+            The app was not treated as a companion dashboard. It functioned as the active interface of the measurement device.
+          </p>
+
+          <p>
+            That meant the UI had to behave with the same discipline as physical instrumentation: predictable zones, minimal interruption, clear state, large readings, and immediate access to measurement actions.
+          </p>
+        </div>
+      </div>
+
+      <div class="choice-note muted">
+        <b>Rejected</b>
+        <p>
+          A generic mobile app structure that treated measurement as content instead of an active instrument workflow.
+        </p>
+      </div>
+    </article>
+
+    <article class="choice-card">
+      <div class="choice-body">
+        <span class="dot"></span>
+        <div>
+          <h3>Built one operating model across four instruments</h3>
+
+          <p>
+            UVA combined multiple instrument behaviours into one product experience. The challenge was not only displaying different readings, but making each instrument feel learnable through the same mental model.
+          </p>
+
+          <p>
+            Probe guidance, primary value, secondary values, graph area, logs, and actions stayed in predictable zones. This allowed users to switch between instruments without relearning the screen each time.
+          </p>
+        </div>
+      </div>
+
+      <div class="choice-note muted">
+        <b>Rejected</b>
+        <p>
+          Designing each instrument as a separate interface, which may fit the data better individually but increases learning effort across the product.
+        </p>
+      </div>
+    </article>
+
+    <article class="choice-card">
+      <div class="choice-body">
+        <span class="dot"></span>
+        <div>
+          <h3>Removed input friction during live measurement</h3>
+
+          <p>
+            Free-text input was avoided during active sessions because the keyboard would compete with the most important content on a landscape screen: the live reading.
+          </p>
+
+          <p>
+            Instead, the interaction model was designed around taps, presets, mode selection, and clear actions. This kept the interface usable while the user was holding probes, checking connections, or standing near equipment.
+          </p>
+        </div>
+      </div>
+
+      <div class="choice-note muted">
+        <b>Rejected</b>
+        <p>
+          Form-heavy flows that required typing during measurement and interrupted the user’s physical workflow.
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
+
+      <section class="image-pair shell" id="prototype">
+  <div class="evolution-box image-pair-note">
+    <p>
+      Some screens, values, and technical details are blurred or recreated with dummy data due to confidentiality.
+    </p>
+  </div>
+
+  <figure>
+    <img src="assets\uva\hero-device.svg" alt="UVA prototype tested on real devices" />
+    <figcaption>
+      End-to-end flow tested on real devices after development — validated across tablet and mobile
+    </figcaption>
+  </figure>
+
+  <figure>
+    <img src="assets\uva\thermal-test.svg" alt="UVA attention and thumb reach testing screens" />
+    <figcaption>
+      Attention tested. Focus mapped. Thumb reach verified. Every placement on this screen has a reason — and the data backs it.
+    </figcaption>
+  </figure>
+</section>
+
+      <section class="section shell" id="physical">
+  <p class="section-kicker">05 — Outcome</p>
+  <h2>Beta-ready app and connected product deliverables</h2>
+
+  <p>
+    UVA reached final testing with the Android app prepared for beta release.
+    As the only designer, I also extended the product’s visual language into brochure and packaging labels.
+  </p>
+
+  <div class="physical-grid uva-packaging-grid">
+  <figure class="uva-packaging-card">
+    <img
+      src="assets\uva\uvapackagecombined.svg"
+      alt="Pilabz UVA package front and angled view"
+    />
+    <figcaption class="caption">
+      Designed to sell the concept before the box is even opened.
+    </figcaption>
+  </figure>
+
+  <figure class="uva-packaging-card">
+    <img
+      src="assets\uva\brochure.svg"
+      alt="Pilabz UVA brochure spread"
+    />
+    <figcaption class="caption">
+      Two spreads to convince a technical buyer with instrument functions, specs, and product value.
+    </figcaption>
+  </figure>
+</div>
+</section>
+
+<section class="impact-metrics shell">
+  <div class="evolution-box metrics-note">
+    <p>
+      Metrics are based on moderated prototype walkthroughs with in-house electrical engineers.
+      They are usability indicators, not post-launch analytics.
+    </p>
+  </div>
+
+  <div class="metrics-grid">
+    <article class="metric-card">
+      <p class="metric-value">80%</p>
+      <h3>Clearer probe setup</h3>
+      <p>
+        Engineers asked fewer setup-related questions after probe diagrams stayed visible on the live reading screen.
+      </p>
+    </article>
+
+    <article class="metric-card metric-card-featured">
+      <p class="metric-value">2×</p>
+      <h3>Faster first reading</h3>
+      <p>
+        Engineers reached the first valid reading faster after the flow was simplified into instrument selection, probe check, and fetch reading.
+      </p>
+    </article>
+
+    <article class="metric-card">
+      <p class="metric-value">70%</p>
+      <h3>Less mode confusion</h3>
+      <p>
+        Engineers moved between DMM, LCR, 1P PQA, and 3P PQA with less hesitation after the same layout logic was used across modes.
+      </p>
+    </article>
+  </div>
+</section>
+    
+
+      <section class="section shell reflection" id="reflection">
+        <p class="section-kicker">06 — Reflection</p>
+        <h2>What this project <strong>taught me</strong></h2>
+        <div class="quote-block">
+          <p>
+            A technical product does not need to feel complicated to feel professional. The right structure can make complex tools easier to trust.
+          </p>
+        </div>
+      </section>
+    </main>
+    <script>
+  const caseTocLinks = document.querySelectorAll(".case-toc-link");
+  const caseTocSections = document.querySelectorAll(
+    "#overview, #problem, #research, #process, #prototype, #redesign, #physical, #reflection"
+  );
+
+  function setCaseTocActive(id) {
+    caseTocLinks.forEach((link) => {
+      link.classList.toggle("is-active", link.getAttribute("href") === `#${id}`);
+    });
+  }
+
+  const caseTocObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setCaseTocActive(entry.target.id);
+        }
+      });
+    },
+    {
+      root: null,
+      rootMargin: "-35% 0px -55% 0px",
+      threshold: 0
+    }
+  );
+
+  caseTocSections.forEach((section) => {
+    caseTocObserver.observe(section);
+  });
+</script>
+
+<script>
+  const mainNav = document.getElementById("nav");
+
+  window.addEventListener(
+    "scroll",
+    () => mainNav.classList.toggle("scrolled", scrollY > 8),
+    { passive: true }
+  );
+
+  const hamburger = document.getElementById("navHamburger");
+  const drawer = document.getElementById("navDrawer");
+  const overlay = document.getElementById("navOverlay");
+  const closeBtn = document.getElementById("navDrawerClose");
+
+  function openDrawer() {
+    drawer.classList.add("open");
+    overlay.classList.add("open");
+    hamburger.classList.add("active");
+  }
+
+  function closeDrawer() {
+    drawer.classList.remove("open");
+    overlay.classList.remove("open");
+    hamburger.classList.remove("active");
+  }
+
+  hamburger.addEventListener("click", openDrawer);
+  closeBtn.addEventListener("click", closeDrawer);
+  overlay.addEventListener("click", closeDrawer);
+</script>
+<script>
+  const customCursor = document.getElementById("customCursor");
+
+  if (customCursor) {
+    window.addEventListener("mousemove", (e) => {
+      customCursor.style.left = `${e.clientX}px`;
+      customCursor.style.top = `${e.clientY}px`;
+    });
+
+    const hoverTargets = document.querySelectorAll(
+      "a, button, .case-toc-link, .nav-resume"
+    );
+
+    hoverTargets.forEach((target) => {
+      target.addEventListener("mouseenter", () => {
+        customCursor.classList.add("is-hovering");
+      });
+
+      target.addEventListener("mouseleave", () => {
+        customCursor.classList.remove("is-hovering");
+      });
+    });
+
+    document.addEventListener("mouseleave", () => {
+      customCursor.classList.add("is-hidden");
+    });
+
+    document.addEventListener("mouseenter", () => {
+      customCursor.classList.remove("is-hidden");
+    });
+  }
+</script>
+  </body>
+</html>

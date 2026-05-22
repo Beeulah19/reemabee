@@ -1,0 +1,350 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pilabz Heat Pump Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link
+   href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500;600;700&display=swap"
+   rel="stylesheet"
+/>
+    <link rel="stylesheet" href="styles2.css" />
+  </head>
+  <body>
+    <div class="custom-cursor" id="customCursor"></div>
+    <!-- MAIN NAV -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="assets\beeulah-logo.svg" alt="logo" />
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="index.html#works" class="nav-link active">Selected Work</a></li>
+    <li><a href="index.html#career" class="nav-link">Experience</a></li>
+    <li><a href="index.html#about" class="nav-link">About</a></li>
+    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+    <li><a href="#" class="nav-resume">Resume</a></li>
+  </ul>
+
+  <button class="nav-hamburger" id="navHamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="nav-drawer" id="navDrawer">
+  <button class="nav-drawer-close" id="navDrawerClose">✕</button>
+
+  <ul class="nav-drawer-links">
+    <li><a href="index.html#works">Selected Work</a></li>
+    <li><a href="index.html#career">Experience</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</div>
+
+    <aside class="case-toc" aria-label="On this page">
+  <div class="case-toc-header">
+    <h3 class="case-toc-project">Heat Pump Dashboard</h3>
+    <p class="case-toc-title">On this page</p>
+  </div>
+
+  <nav class="case-toc-nav">
+    <a class="case-toc-link is-active" href="#overview">Overview</a>
+    <a class="case-toc-link" href="#problem">Problem</a>
+    <a class="case-toc-link" href="#preview">Dashboard preview</a>
+    <a class="case-toc-link" href="#decisions">Design decisions</a>
+    <a class="case-toc-link" href="#impact">Impact & Reflection</a>
+    
+  </nav>
+</aside>
+    <main class="case-study">
+      <header class="hero shell" id="overview">
+        <p class="eyebrow"><span></span> IoT dashboard · Embedded display · 2025</p>
+        <h1>Pilabz Heat Pump Dashboard</h1>
+        <p class="lede">
+          A real-time embedded dashboard designed for a campus heat pump installation, making technical performance data understandable at a glance for both engineers and non-technical employees.
+        </p>
+
+        <dl class="project-meta">
+          <div>
+  <dt>Role</dt>
+  <dd>
+    UI/UX Designer
+    <span class="role-subtext">Sole designer · Research to handoff</span>
+  </dd>
+</div>
+          <div>
+            <dt>Platform</dt>
+            <dd>Embedded display</dd>
+          </div>
+          <div>
+            <dt>Interaction</dt>
+            <dd>None - always-on</dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd>Live · 2025</dd>
+          </div>
+        </dl>
+      </header>
+
+      <section class="section shell" id="problem">
+        <p class="section-kicker">01 — Problem</p>
+        <h2>Dense engineering data. <strong>3 seconds to read it.</strong></h2>
+        <p>
+          The dashboard had to show six live metrics — COP, electrical power, heat delivered, cumulative savings, and daily averages — on one fixed screen. There was no interaction, scrolling, or second-level detail.<br>
+
+          The challenge was to make dense engineering data readable from a distance and meaningful within a few seconds.
+        </p>
+      </section>
+
+      <section class="dashboard-shell shell" id="preview" aria-label="Heat pump dashboard preview">
+      <img class="dashboard-preview-img" src="assets\dashboard-preview.svg" alt="Heat pump dashboard preview" />
+      </section>
+
+      <section class="section shell" id="decisions">
+  <p class="section-kicker">02 — Design decisions</p>
+  <h2>Three choices that <strong>defined the screen</strong></h2>
+
+  <div class="choice-list">
+    <article class="choice-card">
+      <div class="choice-body">
+        <span class="dot"></span>
+        <div>
+          <h3>Led with system value, not system data</h3>
+          <p>
+            The dashboard leads with COP and cumulative savings because they answer the user’s first question:
+
+          <strong>  “Is the system performing well, and is it creating measurable value?”</strong>
+          </p>
+          <p>
+            Instead of starting with raw sensor readings, the screen begins with the metrics that turn system behaviour into a clear performance story.
+          </p>
+        </div>
+      </div>
+
+      <div class="choice-note muted">
+        <b>Rejected</b>
+        <p>
+          A sensor-first dashboard that showed all engineering values upfront and left users to interpret the outcome themselves.
+        </p>
+      </div>
+    </article>
+
+    <article class="choice-card">
+      <div class="choice-body">
+        <span class="dot"></span>
+        <div>
+          <h3>Used a visual anchor for performance understanding</h3>
+          <p>
+            COP is not shown as a number alone. The gauge gives the value context by showing its position within a performance range.
+          </p>
+          <p>
+            The large 5.5 Instantaneous COP supports precision, while the gauge helps users understand direction and performance quality at a glance.
+          </p>
+        </div>
+      </div>
+
+      <div class="choice-note muted">
+        <b>Rejected</b>
+        <p>
+          A simple numeric COP card that was accurate, but lacked range, context, and quick interpretability.
+        </p>
+      </div>
+    </article>
+
+    <article class="choice-card">
+      <div class="choice-body">
+        <span class="dot"></span>
+        <div>
+          <h3>Made business impact impossible to miss</h3>
+          <p>
+            Cumulative savings is treated as a primary metric because it translates technical efficiency into a business outcome.
+          </p>
+          <p>
+            This made the dashboard useful beyond engineering users. A facility manager, business owner, or stakeholder could immediately understand what the system was contributing without needing to decode technical readings.
+          </p>
+        </div>
+      </div>
+
+      <div class="choice-note muted">
+        <b>Rejected</b>
+        <p>
+          Placing savings below engineering values, which would make the system’s business impact feel secondary.
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
+
+      <section class="impact shell" id="impact">
+  <div>
+    <p class="section-kicker">03 — Impact</p>
+    <h2>Numbers that <strong>tell a real story</strong></h2>
+    <div class="impact-copy">
+      The heat pump replaced a fuel-based heating process with a more efficient system.
+      The dashboard was installed as a live always-on display at Zoho’s Tenkasi campus,
+      helping make heat pump performance and energy savings visible in real time.
+    </div>
+  </div>
+
+  <figure class="photo-card">
+    <img src="assets\impact-roomimg.svg" alt="People viewing the heat pump dashboard in a room" />
+  </figure>
+</section>
+<figure class="wide-photo shell">
+  <img src="assets\installed-dashboardimg.svg" alt="Installed Pilabz heat pump dashboard on a wall" />
+</figure>
+
+<section class="impact-metrics shell">
+  <div class="evolution-box metrics-note">
+    <p>
+      Metrics are based on internal walk-by readability testing and display reviews
+      with engineers and non-technical viewers. They are usability indicators,
+      not post-launch analytics.
+    </p>
+  </div>
+
+ <div class="metrics-grid metrics-grid-two">
+    <article class="metric-card">
+      <p class="metric-value">80%</p>
+      <h3>first-glance recall</h3>
+      <p>
+        Savings became the remembered metric. Most viewers recalled the savings value first after it was given the strongest visual weight on the dashboard.
+      </p>
+    </article>
+
+    <article class="metric-card">
+      <p class="metric-value">3 sec</p>
+      <h3>Recognition</h3>
+      <p>
+        Savings story became clear faster. In walk-by testing, viewers understood the energy-impact story faster after cumulative savings was made visually dominant.
+      </p>
+    </article>
+
+    <!-- <article class="metric-card">
+      <p class="metric-value">1–2 m</p>
+      <h3>Distance readability</h3>
+      <p>
+        Typography, spacing, and hierarchy were checked for people viewing the screen
+        from normal standing distance.
+      </p>
+    </article> -->
+  </div>
+</section>
+
+      
+      
+
+      <section class="section shell reflection" id="reflection">
+        <p class="section-kicker">04 — Reflection</p>
+        <h2>What this project <strong>taught me</strong></h2>
+        <div class="quote-block">
+          <p>
+            This project taught me that UX is not always about interaction. In an ambient display, the main job is clarity. The screen has to communicate without asking the viewer to stop, tap, or explore.
+          </p>
+        </div>
+      </section>
+    </main>
+    <script>
+  const caseTocLinks = document.querySelectorAll(".case-toc-link");
+  const caseTocSections = document.querySelectorAll(
+    "#overview, #problem, #preview, #decisions, #impact, #reflection"
+  );
+
+  function setCaseTocActive(id) {
+    caseTocLinks.forEach((link) => {
+      link.classList.toggle("is-active", link.getAttribute("href") === `#${id}`);
+    });
+  }
+
+  const caseTocObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setCaseTocActive(entry.target.id);
+        }
+      });
+    },
+    {
+      root: null,
+      rootMargin: "-35% 0px -55% 0px",
+      threshold: 0
+    }
+  );
+
+  caseTocSections.forEach((section) => {
+    caseTocObserver.observe(section);
+  });
+</script>
+<script>
+  const mainNav = document.getElementById("nav");
+
+  window.addEventListener(
+    "scroll",
+    () => mainNav.classList.toggle("scrolled", scrollY > 8),
+    { passive: true }
+  );
+
+  const hamburger = document.getElementById("navHamburger");
+  const drawer = document.getElementById("navDrawer");
+  const overlay = document.getElementById("navOverlay");
+  const closeBtn = document.getElementById("navDrawerClose");
+
+  function openDrawer() {
+    drawer.classList.add("open");
+    overlay.classList.add("open");
+    hamburger.classList.add("active");
+  }
+
+  function closeDrawer() {
+    drawer.classList.remove("open");
+    overlay.classList.remove("open");
+    hamburger.classList.remove("active");
+  }
+
+  hamburger.addEventListener("click", openDrawer);
+  closeBtn.addEventListener("click", closeDrawer);
+  overlay.addEventListener("click", closeDrawer);
+</script>
+<script>
+  const customCursor = document.getElementById("customCursor");
+
+  if (customCursor) {
+    window.addEventListener("mousemove", (e) => {
+      customCursor.style.left = `${e.clientX}px`;
+      customCursor.style.top = `${e.clientY}px`;
+    });
+
+    const hoverTargets = document.querySelectorAll(
+      "a, button, .case-toc-link, .nav-resume"
+    );
+
+    hoverTargets.forEach((target) => {
+      target.addEventListener("mouseenter", () => {
+        customCursor.classList.add("is-hovering");
+      });
+
+      target.addEventListener("mouseleave", () => {
+        customCursor.classList.remove("is-hovering");
+      });
+    });
+
+    document.addEventListener("mouseleave", () => {
+      customCursor.classList.add("is-hidden");
+    });
+
+    document.addEventListener("mouseenter", () => {
+      customCursor.classList.remove("is-hidden");
+    });
+  }
+</script>
+  </body>
+</html>

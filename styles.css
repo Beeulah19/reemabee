@@ -1883,3 +1883,23 @@ body:has(.cta-btn:hover) .custom-cursor.is-hovering {
     visibility: visible;
   }
 }
+.nav-drawer-close {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: none;
+  color: #111111;
+  font: inherit;
+  cursor: pointer;
+  box-shadow: none;
+  outline: none;
+}
+
+.nav-drawer-close:focus,
+.nav-drawer-close:active,
+.nav-drawer-close:hover {
+  color: #111111;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+}

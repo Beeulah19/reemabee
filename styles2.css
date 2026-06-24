@@ -1080,6 +1080,19 @@ html {
    ASTRA case-study additions
    Add at the bottom of styles2.css
    ============================================ */
+.case-hero-image {
+  width: 100%;
+  margin: 28px 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.case-hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+} 
 
 .astra-overview {
   display: grid;
@@ -2096,3 +2109,4 @@ body:has(.nav-resume:hover) .custom-cursor.is-hovering {
   box-shadow: none;
   outline: none;
 }
+

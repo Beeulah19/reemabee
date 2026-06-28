@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Flo - Agentic AI for Retail | Beeulah</title>
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=2" />
+  <link rel="shortcut icon" href="assets/favicon.svg?v=2" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles2.css" />
+</head>
+
+<body>
+  <div class="custom-cursor" id="customCursor"></div>
+
+  <!-- NAVIGATION -->
+  <nav id="nav">
+    <a href="index.html" class="nav-logo" aria-label="Beeulah portfolio">
+      <img src="assets/beeulah-logo.svg" alt="Beeulah logo" />
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html#works" class="active">Selected Work</a></li>
+      <li><a href="index.html#career">Experience</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+
+      <li>
+        <a
+          href="assets/BeeulahDesigner Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="nav-resume"
+        >
+          Resume
+        </a>
+      </li>
+    </ul>
+
+    <button
+      class="nav-hamburger"
+      id="navHamburger"
+      type="button"
+      aria-label="Open navigation"
+      aria-expanded="false"
+      aria-controls="navDrawer"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <div class="nav-drawer" id="navDrawer">
+    <button
+      class="nav-drawer-close"
+      id="navDrawerClose"
+      type="button"
+      aria-label="Close navigation"
+    >
+      ✕
+    </button>
+
+    <ul class="nav-drawer-links">
+      <li><a href="index.html#works">Selected Work</a></li>
+      <li><a href="index.html#career">Experience</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+
+      <li>
+        <a
+          href="assets/BeeulahDesigner Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="nav-resume"
+        >
+          Resume
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- TABLE OF CONTENTS -->
+  <aside class="case-toc" aria-label="Case study navigation">
+    <div class="case-toc-header">
+      <p class="case-toc-project">Flo</p>
+      <p class="case-toc-title">Case study contents</p>
+    </div>
+
+    <nav class="case-toc-nav">
+      <a href="#overview" class="case-toc-link is-active">Overview</a>
+      <a href="#people" class="case-toc-link">People</a>
+      <a href="#context" class="case-toc-link">A shift with Alex</a>
+      <a href="#problem" class="case-toc-link">The problem</a>
+      <a href="#jtbd" class="case-toc-link">Jobs to Be Done</a>
+      <a href="#decisions" class="case-toc-link">Design decisions</a>
+      <a href="#agent-behaviour" class="case-toc-link">Agent behaviour</a>
+      <a href="#errors" class="case-toc-link">Error handling</a>
+      <a href="#conclusion" class="case-toc-link">Conclusion</a>
+    </nav>
+  </aside>
+
+  <!-- CASE STUDY -->
+  <main class="case-study agentic-case">
+    <div class="shell">
+
+      <!-- HERO -->
+      <header class="hero" id="overview">
+        <p class="eyebrow">
+          <span></span>
+          Agentic AI · Retail operations · Concept project
+        </p>
+
+        <h1>Flo - A Retail Floor App Powered by an Agentic AI</h1>
+
+        <p class="lede">
+          Flo is a retail floor app designed around the realities of a store
+          associate’s shift. Its AI assistant, Flora, helps associates understand
+          priorities, continue interrupted work, report issues naturally, and stay
+          confident without adding more screen time to an already busy day.
+        </p>
+
+        <figure class="case-hero-image">
+          <img
+            src="assets/agentic-ai/flo-hero.png"
+            alt="Flo retail floor app and Flora AI assistant"
+          />
+        </figure>
+
+        <!-- <dl class="project-meta">
+          <div>
+            <dt>My role</dt>
+            <dd>Product Designer</dd>
+            <span class="role-subtext">
+              Research framing, interaction design, AI behaviour and UI
+            </span>
+          </div>
+
+          <div>
+            <dt>Product</dt>
+            <dd>Retail floor operations app</dd>
+          </div>
+
+          <div>
+            <dt>Focus</dt>
+            <dd>Agentic AI experience</dd>
+          </div>
+
+          <div>
+            <dt>Platform</dt>
+            <dd>Mobile application</dd>
+          </div>
+        </dl> -->
+      </header>
+
+      <!-- PEOPLE -->
+      <section class="section" id="people">
+        <p class="section-kicker">People in the journey</p>
+        <h2>The experience was shaped around three roles</h2>
+
+        <p>
+          Flo is not simply a task-list product. It connects the person doing the
+          work, the person supervising the shift, and the AI agent supporting both.
+        </p>
+
+        <div class="agentic-people-grid">
+  <article class="agentic-person-card">
+    <div class="agentic-person-copy">
+      <p class="section-kicker">Retail associate</p>
+      <h3>Alex</h3>
+      <p>
+        Alex knows the store deeply, but works with full hands, constant
+        interruptions, limited attention, and little patience for tools that
+        slow him down.
+      </p>
+    </div>
+
+    <figure class="agentic-person-visual">
+      <img
+        src="assets/agentic-ai/alex.svg"
+        alt="Illustration of Alex, a retail associate"
+      />
+    </figure>
+  </article>
+
+  <article class="agentic-person-card">
+    <div class="agentic-person-copy">
+      <p class="section-kicker">AI assistant</p>
+      <h3>Flora</h3>
+      <p>
+        Flora understands task urgency, listens to natural speech, classifies
+        issues, routes reports, and helps Alex continue his work without needing
+        to manage the system.
+      </p>
+    </div>
+
+    <figure class="agentic-person-visual">
+      <img
+        src="assets/agentic-ai/flora.svg"
+        alt="Illustration of Flora, the AI assistant"
+      />
+    </figure>
+  </article>
+
+  <article class="agentic-person-card">
+    <div class="agentic-person-copy">
+      <p class="section-kicker">Supervisor</p>
+      <h3>Tiara</h3>
+      <p>
+        Tiara assigns work, monitors progress, responds to issues, and needs
+        confidence that the floor is being handled without following up on every
+        small task.
+      </p>
+    </div>
+
+    <figure class="agentic-person-visual">
+      <img
+        src="assets/agentic-ai/tiara.svg"
+        alt="Illustration of Tiara, a retail supervisor"
+      />
+    </figure>
+  </article>
+</div>
+      </section>
+
+      <!-- CONTEXT -->
+      <section class="section" id="context">
+        <p class="section-kicker">The morning that started this</p>
+        <h2>It is 9:02 AM. Alex has just clocked in.</h2>
+
+        <p>
+          The store is already busy. Alex may be carrying a scanner, handling a
+          trolley, answering a customer, or walking between the stockroom and the
+          floor. His phone is usually in his pocket or apron-not held carefully in
+          both hands.
+        </p>
+
+        <p>
+          He does not dislike technology. He dislikes technology that assumes he
+          has time, attention, and two free hands. He needs something that works
+          within his shift rather than asking the shift to adapt around the app.
+        </p>
+
+        <figure class="wide-photo">
+          <img
+            src="assets/agentic-ai/alex-shift-context.svg"
+            alt="Illustrated sequence showing Alex during a busy retail shift"
+          />
+
+          <figcaption class="caption">
+            Alex moves through physical work, customer interruptions and shifting
+            priorities throughout the day.
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- PROBLEM -->
+      <section class="section" id="problem">
+        <p class="section-kicker">The actual problem</p>
+        <h2>This is Alex’s problem-not a product problem looking for a solution</h2>
+
+        <p>
+          Alex is not bad at his job. The problem is that most tools assume a
+          version of his day that does not exist: someone sitting down with full
+          attention available for a screen.
+        </p>
+
+        <div class="agentic-jobs-grid agentic-problem-grid">
+  <article>
+    <h3>His hands and attention are often occupied</h3>
+    <p>
+      Anything that requires two hands, prolonged focus or several taps
+      is likely to be skipped, delayed or handled outside the system.
+    </p>
+  </article>
+
+  <article>
+    <h3>The task list does not explain priority</h3>
+    <p>
+      Alex may know what needs to be done, but not what should happen
+      first or why one task matters more than another at that moment.
+    </p>
+  </article>
+
+  <article>
+    <h3>Interruptions erase working context</h3>
+    <p>
+      After helping a customer or handling an unexpected issue, Alex can
+      return to a task and genuinely lose his place-not because he is
+      careless, but because the interruption displaced the context.
+    </p>
+  </article>
+</div>
+
+        <figure class="wide-photo">
+          <img
+            src="assets/agentic-ai/problem-scenarios.svg"
+            alt="Three illustrated retail floor problem scenarios"
+          />
+        </figure>
+      </section>
+
+      <!-- JTBD -->
+      <section class="section" id="jtbd">
+        <p class="section-kicker">Why Jobs to Be Done</p>
+        <h2>Alex is not trying to use an app</h2>
+
+        <p>
+          He is trying to complete a shift feeling capable and in control. A
+          feature-led approach would produce a better checklist. A job-led approach
+          asks what Alex is actually trying to achieve through that checklist.
+        </p>
+
+        <div class="agentic-jobs-grid">
+          <article>
+            <p class="section-kicker">Functional job</p>
+
+            <h3>Help me know what to do next</h3>
+
+            <p>
+              When I start my shift, I want to know exactly what to do and in what
+              order, without repeatedly asking Tiara or rereading a long list.
+            </p>
+          </article>
+
+          <article>
+            <p class="section-kicker">Emotional job</p>
+
+            <h3>Help me recover without feeling behind</h3>
+
+            <p>
+              When something unexpected happens, I want to handle it and continue
+              without feeling that I have failed or made the shift harder.
+            </p>
+          </article>
+
+          <article>
+            <p class="section-kicker">Social job</p>
+
+            <h3>Help others trust that I handled it</h3>
+
+            <p>
+              When my shift ends, I want Tiara to see that the work was completed
+              properly without needing to follow up with me repeatedly.
+            </p>
+          </article>
+        </div>
+        <figure class="wide-photo agentic-jtbd-photo">
+  <img
+    src="assets/agentic-ai/jtbd-full-width.svg"
+    alt="Jobs to Be Done visual for the retail assistant experience"
+  />
+</figure>
+      </section>
+
+      <!-- FULL SCREEN FLOW -->
+      <section class="section" id="decisions">
+        <p class="section-kicker">Core experience</p>
+        <h2>From task priority to issue resolution</h2>
+
+        <p>
+          The primary flow keeps Alex within one continuous work context. Flora
+          handles the transition from recognising an issue to logging and routing
+          it while the task screen remains visible behind the interaction.
+        </p>
+
+        <figure class="wide-photo shipped-screens">
+          <img
+            src="assets/agentic-ai/flo-core-flow.svg"
+            alt="Complete Flo retail task and reporting flow"
+          />
+
+          <figcaption class="caption">
+            Home, active task, reporting, AI interpretation, confirmation and
+            return-to-task states.
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- AGENT BEHAVIOUR -->
+      <section class="section" id="agent-behaviour">
+        <p class="section-kicker">Agent behaviour</p>
+        <h2>Flora acts independently-but not invisibly</h2>
+
+        <div class="agentic-behaviour-grid">
+          <article>
+            <h3>What Flora can do alone</h3>
+
+            <p>
+              Flora can classify reports, create logs, identify the right team and
+              notify the relevant person when those actions only affect the system.
+            </p>
+          </article>
+
+          <article>
+            <h3>When Flora asks first</h3>
+
+            <p>
+              Flora asks for confirmation when an action affects Alex’s task,
+              schedule or time-for example, sending a report, pausing a task or
+              rescheduling work.
+            </p>
+          </article>
+
+          <article>
+            <h3>What Flora never does</h3>
+
+            <p>
+              She does not ask Alex to categorise his own issue, repeat confirmed
+              information or answer open-ended system questions during a busy task.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- LANGUAGE AND TONE -->
+      <section class="section">
+        <p class="section-kicker">Language and tone</p>
+        <h2>Calm, multilingual and sensitive to pressure</h2>
+
+        <p>
+          Alex naturally mixes Hindi and English. Flora is designed to understand
+          the language and tone he uses rather than requiring formal commands or
+          perfect sentences.
+        </p>
+
+        <div class="problem-table agentic-tone-table">
+          <div class="problem-table-head">Context</div>
+          <div class="problem-table-head">Flora’s response</div>
+
+          <div>Alex is on time</div>
+          <div>
+            Flora gives enough context to support the task and explains where to go.
+          </div>
+
+          <div>Alex is running behind</div>
+          <div>
+            Flora removes unnecessary detail, becomes more direct and makes urgency
+            visually clear.
+          </div>
+
+          <div>Alex sounds frustrated</div>
+          <div>
+            Flora remains brief and steady instead of matching his stress or asking
+            more questions.
+          </div>
+        </div>
+      </section>
+
+      <!-- ERRORS -->
+      <section class="section" id="errors">
+        <p class="section-kicker">Error handling</p>
+        <h2>Nothing should fail silently</h2>
+
+        <p>
+          Error recovery was designed to preserve Alex’s momentum. He should not
+          need to restart a report or wonder whether something disappeared.
+        </p>
+
+        <div class="image-pair agentic-error-pair">
+          <figure>
+            <img
+              src="assets/agentic-ai/flo-mic-error.svg"
+              alt="Flo could not hear voice input and opens typing"
+            />
+
+            <figcaption>
+              If the microphone fails, Flo explains what happened and opens typing
+              automatically.
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="assets/agentic-ai/flo-network-error.svg"
+              alt="Flo report network failure with retry and save for later"
+            />
+
+            <figcaption>
+              If sending fails, Alex can retry or save the report for later. The
+              system never silently loses his input.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- CONCLUSION -->
+      <section class="section reflection" id="conclusion">
+        <p class="section-kicker">Conclusion</p>
+        <h2>From task management to a supportive floor companion</h2>
+
+        <p>
+          Flo shifts retail task management away from a long checklist and toward a
+          context-aware assistant that helps associates stay clear, confident and
+          in flow.
+        </p>
+
+        <p>
+          Flora does not replace Alex’s knowledge of the store. She supports it by
+          reducing uncertainty, preserving context, handling administrative work
+          and helping the right information reach the right person.
+        </p>
+
+        <!-- <div class="evolution-box">
+          <p>
+            The strongest agentic experience was not the one that acted the most.
+            It was the one that understood when to act, when to explain and when to
+            ask.
+          </p>
+        </div> -->
+      </section>
+
+    </div>
+  </main>
+
+  <!-- NAVIGATION SCRIPT -->
+  <script>
+    const nav = document.getElementById("nav");
+    const hamburger = document.getElementById("navHamburger");
+    const drawer = document.getElementById("navDrawer");
+    const overlay = document.getElementById("navOverlay");
+    const closeButton = document.getElementById("navDrawerClose");
+    const drawerLinks = document.querySelectorAll(".nav-drawer-links a");
+
+    function openDrawer() {
+      drawer.classList.add("open");
+      overlay.classList.add("open");
+      hamburger.classList.add("active");
+      hamburger.setAttribute("aria-expanded", "true");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeDrawer() {
+      drawer.classList.remove("open");
+      overlay.classList.remove("open");
+      hamburger.classList.remove("active");
+      hamburger.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
+    }
+
+    hamburger.addEventListener("click", () => {
+      drawer.classList.contains("open") ? closeDrawer() : openDrawer();
+    });
+
+    closeButton.addEventListener("click", closeDrawer);
+    overlay.addEventListener("click", closeDrawer);
+
+    drawerLinks.forEach((link) => {
+      link.addEventListener("click", closeDrawer);
+    });
+
+    window.addEventListener(
+      "scroll",
+      () => {
+        nav.classList.toggle("scrolled", window.scrollY > 8);
+      },
+      { passive: true }
+    );
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeDrawer();
+    });
+  </script>
+
+  <!-- TOC ACTIVE STATE -->
+  <script>
+    const tocLinks = document.querySelectorAll(".case-toc-link");
+    const caseSections = document.querySelectorAll(
+      "#overview, #people, #context, #problem, #jtbd, #decisions, #agent-behaviour, #errors, #conclusion"
+    );
+
+    const tocObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          tocLinks.forEach((link) => {
+            link.classList.toggle(
+              "is-active",
+              link.getAttribute("href") === `#${entry.target.id}`
+            );
+          });
+        });
+      },
+      {
+        rootMargin: "-25% 0px -65% 0px",
+        threshold: 0
+      }
+    );
+
+    caseSections.forEach((section) => tocObserver.observe(section));
+  </script>
+
+  <!-- CUSTOM CURSOR -->
+  <script>
+    const customCursor = document.getElementById("customCursor");
+
+    if (customCursor) {
+      window.addEventListener("mousemove", (event) => {
+        customCursor.style.left = `${event.clientX}px`;
+        customCursor.style.top = `${event.clientY}px`;
+        customCursor.classList.remove("is-hidden");
+      });
+
+      const hoverTargets = document.querySelectorAll(
+        "a, button, .case-toc-link, .agentic-person-card, .agentic-phone-frame"
+      );
+
+      hoverTargets.forEach((target) => {
+        target.addEventListener("mouseenter", () => {
+          customCursor.classList.add("is-hovering");
+        });
+
+        target.addEventListener("mouseleave", () => {
+          customCursor.classList.remove("is-hovering");
+        });
+      });
+
+      document.addEventListener("mouseleave", () => {
+        customCursor.classList.add("is-hidden");
+      });
+
+      document.addEventListener("mouseenter", () => {
+        customCursor.classList.remove("is-hidden");
+      });
+    }
+  </script>
+</body>
+</html>

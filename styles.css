@@ -476,7 +476,7 @@ nav.scrolled {
   margin-bottom: 0;
 }
 
-/* Career layout — role + content paired */
+/* Career layout - role + content paired */
 .career-list {
   display: grid;
   gap: 0;
@@ -1419,7 +1419,7 @@ button {
 }
 
 /* ============================================
-   MOBILE PRESS / TAP STATES — VISIBLE VERSION
+   MOBILE PRESS / TAP STATES - VISIBLE VERSION
    Main page only
    ============================================ */
 
@@ -1497,7 +1497,7 @@ button:focus-visible {
 }
 
 /* ============================================
-   CUSTOM CURSOR — CONTRAST ON DARK / TEAL AREAS
+   CUSTOM CURSOR - CONTRAST ON DARK / TEAL AREAS
    Keep this at the very bottom of styles.css
    ============================================ */
 
@@ -1521,7 +1521,7 @@ body:has(.cta-btn:hover) .custom-cursor.is-hovering {
 }
 
 /* ============================================
-   OFFSCREEN MOBILE GALLERY — FINAL
+   OFFSCREEN MOBILE GALLERY - FINAL
    2x2 same size + caption inside + better image fit
    ============================================ */
 
@@ -1710,7 +1710,7 @@ body:has(.cta-btn:hover) .custom-cursor.is-hovering {
 }
 
 /* ============================================
-   MOBILE IMAGE SHARPNESS FIX — MAIN PAGE
+   MOBILE IMAGE SHARPNESS FIX - MAIN PAGE
    ============================================ */
 
 @media (max-width: 768px) {
@@ -1769,7 +1769,7 @@ body:has(.cta-btn:hover) .custom-cursor.is-hovering {
 }
 
 /* ============================================
-   LARGE MONITOR ALIGNMENT — MAIN PAGE
+   LARGE MONITOR ALIGNMENT - MAIN PAGE
    Starts only after normal desktop/laptop
    ============================================ */
 
@@ -1812,7 +1812,7 @@ body:has(.cta-btn:hover) .custom-cursor.is-hovering {
     visibility: visible;
   }
 }/* ============================================
-   LARGE MONITOR ONLY — MAIN PAGE
+   LARGE MONITOR ONLY - MAIN PAGE
    Starts after normal laptop/desktop sizes
    ============================================ */
 
@@ -1847,7 +1847,7 @@ body:has(.cta-btn:hover) .custom-cursor.is-hovering {
 }
 
 /* ============================================
-   LARGE MONITOR ONLY — NAV + LANDER IMAGE
+   LARGE MONITOR ONLY - NAV + LANDER IMAGE
    ============================================ */
 
 @media (min-width: 1700px) {
@@ -1902,4 +1902,50 @@ body:has(.cta-btn:hover) .custom-cursor.is-hovering {
   background: transparent;
   box-shadow: none;
   outline: none;
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.work-card:nth-child(5),
+.work-card:nth-child(6) {
+  grid-column: span 2;
+}
+
+/* Keep all cards visually balanced */
+.work-img {
+  width: 100%;
+  height: 280px;
+  display: block;
+  object-fit: cover;
+}
+
+/* Wider cards should not become taller */
+.work-card:nth-child(5) .work-img,
+.work-card:nth-child(6) .work-img {
+  height: 280px;
+}
+
+@media (max-width: 640px) {
+  .works-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-card:nth-child(5),
+  .work-card:nth-child(6) {
+    grid-column: span 1;
+  }
+
+  /* Same image height for all six cards */
+  .work-img,
+  .work-card:nth-child(5) .work-img,
+  .work-card:nth-child(6) .work-img {
+    width: 100%;
+    height: 260px;
+    aspect-ratio: auto;
+    object-fit: cover;
+  }
 }

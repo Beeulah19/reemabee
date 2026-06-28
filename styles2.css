@@ -1134,9 +1134,9 @@ html {
 
 .astra-robot-card img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
 }
 
@@ -1676,7 +1676,7 @@ html {
   }
 }
 
-/* Heat Pump metric cards — fixed 2-card layout */
+/* Heat Pump metric cards - fixed 2-card layout */
 .metrics-grid.metrics-grid-two {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: stretch;
@@ -1810,7 +1810,7 @@ html {
 }
 
 /* ============================================
-   CUSTOM CURSOR — CASE STUDY PAGES
+   CUSTOM CURSOR - CASE STUDY PAGES
    Paste at bottom of styles2.css
    ============================================ */
 
@@ -1908,7 +1908,7 @@ body:has(.nav-resume:hover) .custom-cursor.is-hovering {
 }
 
 /* ============================================
-   MOBILE IMAGE SHARPNESS FIX — CASE STUDIES
+   MOBILE IMAGE SHARPNESS FIX - CASE STUDIES
    ============================================ */
 
 @media (max-width: 768px) {
@@ -1936,7 +1936,7 @@ body:has(.nav-resume:hover) .custom-cursor.is-hovering {
 }
 
 /* ============================================
-   MOBILE IMAGE BLUR FIX — CASE STUDIES
+   MOBILE IMAGE BLUR FIX - CASE STUDIES
    ============================================ */
 
 @media (max-width: 768px) {
@@ -1962,7 +1962,7 @@ body:has(.nav-resume:hover) .custom-cursor.is-hovering {
 }
 
 /* ============================================
-   UVA PACKAGING — SAME HEIGHT FIX
+   UVA PACKAGING - SAME HEIGHT FIX
    ============================================ */
 
 .uva-packaging-grid {
@@ -2008,7 +2008,7 @@ body:has(.nav-resume:hover) .custom-cursor.is-hovering {
 }
 
 /* ============================================
-   Pi-CADS — What usage revealed section
+   Pi-CADS - What usage revealed section
    ============================================ */
 
 .before-after-grid {
@@ -2066,7 +2066,7 @@ body:has(.nav-resume:hover) .custom-cursor.is-hovering {
 }
 
 /* ============================================
-   LARGE MONITOR ONLY — CASE STUDIES
+   LARGE MONITOR ONLY - CASE STUDIES
    Starts after normal laptop/desktop sizes
    ============================================ */
 
@@ -2110,3 +2110,911 @@ body:has(.nav-resume:hover) .custom-cursor.is-hovering {
   outline: none;
 }
 
+/* =========================================================
+   LYTMUS PREVIEW PAGE
+========================================================= */
+
+.lytmus-preview-page {
+  min-height: 100vh;
+  padding-top: 64px;
+}
+
+/* Hero: copy left, splash screen right */
+.lytmus-preview-hero {
+  width: min(1180px, calc(100% - 120px));
+  margin: 0 auto;
+  padding: 80px 0 72px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 420px;
+  gap: 80px;
+  align-items: center;
+}
+
+.lytmus-preview-copy {
+  min-width: 0;
+}
+
+.lytmus-preview-copy .eyebrow {
+  margin-bottom: 16px;
+}
+
+.lytmus-preview-copy h1 {
+  margin: 0;
+  color: var(--accent);
+  font-family: var(--font-head);
+  font-size: clamp(34px, 5vw, 52px);
+  font-weight: 600;
+  line-height: 1.11;
+  letter-spacing: -1px;
+}
+
+.lytmus-preview-copy .preview-lede {
+  max-width: 650px;
+  margin: 12px 0 0;
+  padding-bottom: 21px;
+  color: var(--body);
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+
+/* Splash screen */
+.lytmus-splash {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lytmus-splash img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Onboarding section */
+.lytmus-onboarding-section {
+  padding: 72px 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.lytmus-section-heading {
+  width: min(918px, calc(100% - 40px));
+  margin: 0 auto 42px;
+}
+
+.lytmus-section-heading h2 {
+  max-width: 760px;
+  margin-top: 8px;
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.lytmus-section-heading > p:not(.section-kicker) {
+  max-width: 760px;
+  margin-top: 18px;
+  color: var(--body);
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: 1.75;
+}
+
+/* Full onboarding image */
+.lytmus-onboarding-section .preview-ui {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: var(--panel);
+}
+
+.lytmus-onboarding-section .preview-ui img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Coming-soon note */
+.preview-coming-soon {
+  width: min(918px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 72px 0 90px;
+}
+
+
+.lytmus-coming-soon-note {
+  padding: 24px 25px 26px;
+  border: 1px solid rgba(6, 110, 97, 0.22);
+  border-radius: 8px;
+  background: rgba(6, 110, 97, 0.08);
+  text-align: left;
+}
+
+/* Existing small uppercase label style */
+.lytmus-coming-soon-note .section-kicker {
+  margin: 0;
+  color: var(--muted);
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 1.32px;
+  text-transform: uppercase;
+}
+
+/* Match existing case-study section heading */
+.lytmus-coming-soon-note h2 {
+  margin: 7px 0 0;
+  color: var(--accent);
+  font-family: var(--font-head);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+/* Match existing case-study paragraph */
+.lytmus-coming-soon-note .preview-coming-soon-copy {
+  max-width: none;
+  margin: 13px 0 0;
+  color: var(--body);
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+
+/* Primary green LinkedIn button */
+.lytmus-coming-soon-note .preview-linkedin-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  padding: 11px 24px;
+
+  border: 1px solid var(--accent);
+  border-radius: 100px;
+  background: var(--accent);
+  color: #ffffff !important;
+
+  font-family: var(--font-head);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.lytmus-coming-soon-note .preview-linkedin-button:visited {
+  color: #ffffff !important;
+}
+
+.lytmus-coming-soon-note .preview-linkedin-button:hover {
+  border-color: var(--accent-dark);
+  background: var(--accent-dark);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .lytmus-preview-hero {
+    width: min(100% - 40px, 918px);
+    grid-template-columns: 1fr;
+    gap: 42px;
+    padding: 64px 0 58px;
+  }
+
+  .lytmus-splash {
+    justify-content: flex-start;
+  }
+
+  .lytmus-splash img {
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 760px) {
+  .lytmus-preview-page {
+    padding-top: 60px;
+  }
+
+  .lytmus-preview-hero {
+    width: min(100% - 32px, 918px);
+    padding: 48px 0;
+    gap: 32px;
+  }
+
+  .lytmus-preview-copy h1 {
+    font-size: clamp(34px, 10vw, 46px);
+  }
+
+  .lytmus-preview-copy .preview-lede,
+  .lytmus-section-heading > p:not(.section-kicker),
+  .lytmus-coming-soon-note .preview-coming-soon-copy {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .lytmus-splash {
+    justify-content: center;
+  }
+
+  .lytmus-splash img {
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .lytmus-onboarding-section {
+    padding-top: 54px;
+  }
+
+  .lytmus-section-heading {
+    width: min(100% - 32px, 918px);
+    margin-bottom: 30px;
+  }
+
+  .preview-coming-soon {
+    width: min(100% - 32px, 918px);
+    padding: 54px 0 72px;
+  }
+
+  .lytmus-coming-soon-note {
+    padding: 22px 18px 24px;
+  }
+
+  .lytmus-coming-soon-note h2 {
+    font-size: 27px;
+  }
+
+  .lytmus-coming-soon-note .preview-coming-soon-copy {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .lytmus-coming-soon-note .preview-linkedin-button {
+    width: 100%;
+  }
+}
+
+/* ============================================
+   FLO / AGENTIC AI CASE STUDY
+   Uses existing portfolio variables and type
+   ============================================ */
+
+.agentic-people-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 26px;
+}
+
+.agentic-person-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  padding: 20px;
+}
+
+.agentic-person-card img {
+  width: 100%;
+  height: 210px;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+.agentic-person-card h3 {
+  margin-top: 7px;
+  font-size: 24px;
+}
+
+.agentic-person-card > p:not(.section-kicker) {
+  margin-top: 12px;
+  color: var(--body);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.agentic-jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 26px;
+}
+
+.agentic-jobs-grid article {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel-2);
+  padding: 22px;
+}
+
+.agentic-jobs-grid h3 {
+  margin-top: 8px;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.agentic-jobs-grid article > p:not(.section-kicker) {
+  margin-top: 14px;
+  color: var(--body);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.agentic-decision-block {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 52px;
+  align-items: center;
+  padding: 48px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.agentic-decision-block:last-child {
+  border-bottom: 0;
+  padding-bottom: 10px;
+}
+
+.agentic-decision-reverse .agentic-decision-copy {
+  order: 2;
+}
+
+.agentic-decision-reverse .agentic-phone-frame {
+  order: 1;
+}
+
+.agentic-decision-copy h3 {
+  margin: 0;
+  color: var(--accent);
+  font-family: var(--font-head);
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -1px;
+}
+
+.agentic-decision-copy p {
+  margin-top: 16px;
+  color: var(--body);
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: 1.75;
+}
+
+.agentic-phone-frame {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--panel-2);
+}
+
+.agentic-phone-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.agentic-behaviour-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 26px;
+}
+
+.agentic-behaviour-grid article {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  padding: 22px;
+}
+
+.agentic-behaviour-grid h3 {
+  font-size: 21px;
+  line-height: 1.2;
+}
+
+.agentic-behaviour-grid p {
+  margin-top: 12px;
+  color: var(--body);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.agentic-thinking-note {
+  margin-top: 28px;
+  padding: 18px 22px;
+}
+
+.agentic-tone-table {
+  margin-top: 26px;
+}
+
+.agentic-error-pair {
+  margin-top: 28px;
+}
+
+.agentic-error-pair figure:first-child img,
+.agentic-error-pair figure:last-child img {
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 900px) {
+  .agentic-people-grid,
+  .agentic-jobs-grid,
+  .agentic-behaviour-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .agentic-decision-block {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 38px 0;
+  }
+
+  .agentic-decision-reverse .agentic-decision-copy,
+  .agentic-decision-reverse .agentic-phone-frame {
+    order: initial;
+  }
+
+  .agentic-phone-frame {
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 760px) {
+  .agentic-person-card img {
+    height: auto;
+  }
+
+  .agentic-decision-copy h3 {
+    font-size: 23px;
+  }
+
+  .agentic-decision-copy p {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .agentic-tone-table {
+    grid-template-columns: 105px minmax(0, 1fr);
+    gap: 0 14px;
+  }
+}
+
+/* =========================================================
+   FLO CASE STUDY - LAYOUT FIXES ONLY
+   No typography, content, colour or asset changes
+========================================================= */
+
+
+/* =========================================================
+   1. PEOPLE CARDS
+   Keep all three cards equal.
+   Images stay full-width and bottom-aligned.
+========================================================= */
+
+.agentic-case .agentic-people-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+
+.agentic-case .agentic-person-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 0;
+}
+
+.agentic-case .agentic-person-copy {
+  flex: 1;
+}
+
+.agentic-case .agentic-person-visual {
+  width: 100%;
+  margin: 24px 0 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.agentic-case .agentic-person-visual img {
+  width: 100%;
+  height: 230px;
+  max-width: none;
+  max-height: none;
+  display: block;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+
+/* =========================================================
+   2. CONTEXT SECTION
+   Text left, Alex image right
+========================================================= */
+
+.agentic-case #context {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.9fr);
+  grid-template-rows: auto auto auto auto;
+  gap: 0 42px;
+  align-items: start;
+}
+
+.agentic-case #context > .section-kicker,
+.agentic-case #context > h2,
+.agentic-case #context > p {
+  grid-column: 1;
+}
+
+.agentic-case #context > .wide-photo {
+  grid-column: 2;
+  grid-row: 1 / -1;
+  align-self: center;
+  margin: 0;
+}
+
+.agentic-case #context > .wide-photo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   3. PROBLEM SECTION
+   Problem text/list left, illustration right
+========================================================= */
+
+.agentic-case #problem {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+  gap: 0 44px;
+  align-items: start;
+}
+
+.agentic-case #problem > .section-kicker,
+.agentic-case #problem > h2,
+.agentic-case #problem > p,
+.agentic-case #problem > .choice-list {
+  grid-column: 1;
+}
+
+.agentic-case #problem > .wide-photo {
+  grid-column: 2;
+  grid-row: 1 / 5;
+  align-self: center;
+  margin: 0;
+}
+
+.agentic-case #problem > .wide-photo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   4. AGENT BEHAVIOUR
+   Existing heading and cards stay full-width.
+   Note moves left, Flora image moves right.
+========================================================= */
+
+.agentic-case #agent-behaviour {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+  gap: 0 42px;
+  align-items: center;
+}
+
+.agentic-case #agent-behaviour > .section-kicker,
+.agentic-case #agent-behaviour > h2,
+.agentic-case #agent-behaviour > .agentic-behaviour-grid {
+  grid-column: 1 / -1;
+}
+
+.agentic-case #agent-behaviour > .agentic-thinking-note {
+  grid-column: 1;
+  margin-top: 28px;
+}
+
+.agentic-case #agent-behaviour > .wide-photo {
+  grid-column: 2;
+  margin-top: 28px;
+}
+
+.agentic-case #agent-behaviour > .wide-photo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   5. ERROR HANDLING
+   Two equal-size mockups, scaled down and visible together
+========================================================= */
+
+.agentic-case .agentic-error-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  align-items: start;
+  padding-top: 28px;
+}
+
+.agentic-case .agentic-error-pair figure {
+  height: auto;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.agentic-case .agentic-error-pair figure:first-child img,
+.agentic-case .agentic-error-pair figure:last-child img {
+  width: 100%;
+  height: min(52vh, 460px) !important;
+  flex: none;
+  display: block;
+  object-fit: contain !important;
+  object-position: center bottom;
+}
+
+.agentic-case .agentic-error-pair figcaption {
+  margin-top: 12px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .agentic-case .agentic-people-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .agentic-case .agentic-person-visual img {
+    height: 260px;
+  }
+
+  .agentic-case #context,
+  .agentic-case #problem,
+  .agentic-case #agent-behaviour {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .agentic-case #context > .section-kicker,
+  .agentic-case #context > h2,
+  .agentic-case #context > p,
+  .agentic-case #context > .wide-photo,
+  .agentic-case #problem > .section-kicker,
+  .agentic-case #problem > h2,
+  .agentic-case #problem > p,
+  .agentic-case #problem > .choice-list,
+  .agentic-case #problem > .wide-photo,
+  .agentic-case #agent-behaviour > .section-kicker,
+  .agentic-case #agent-behaviour > h2,
+  .agentic-case #agent-behaviour > .agentic-behaviour-grid,
+  .agentic-case #agent-behaviour > .agentic-thinking-note,
+  .agentic-case #agent-behaviour > .wide-photo {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .agentic-case #context > .wide-photo,
+  .agentic-case #problem > .wide-photo,
+  .agentic-case #agent-behaviour > .wide-photo {
+    margin-top: 4px;
+  }
+
+  .agentic-case .agentic-error-pair {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .agentic-case .agentic-error-pair figure:first-child img,
+  .agentic-case .agentic-error-pair figure:last-child img {
+    height: auto !important;
+    max-height: 520px;
+  }
+}
+
+@media (max-width: 760px) {
+  .agentic-case .agentic-person-visual img {
+    height: 220px;
+  }
+}
+
+/* =========================================================
+   FLO - ACTUAL PROBLEM + JTBD FINAL LAYOUT
+========================================================= */
+
+/* Reset the previous two-column problem layout */
+.agentic-case #problem {
+  display: block;
+}
+
+/* Three equal cards across the full content width */
+.agentic-case #problem .agentic-problem-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+  max-width: none;
+  margin-top: 26px;
+  align-items: stretch;
+}
+
+.agentic-case #problem .agentic-problem-grid article {
+  min-width: 0;
+  height: 100%;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel-2);
+}
+
+.agentic-case #problem .agentic-problem-grid h3 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.agentic-case #problem .agentic-problem-grid p {
+  margin-top: 14px;
+  color: var(--body);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+/* Full-width image underneath the cards */
+.agentic-case #problem > .wide-photo {
+  width: 100%;
+  height: auto;
+  margin: 28px 0 0;
+  display: block;
+}
+
+.agentic-case #problem > .wide-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+}
+
+
+/* JTBD full-width image below its cards */
+.agentic-case #jtbd .agentic-jtbd-photo {
+  width: 100%;
+  margin: 28px 0 0;
+}
+
+.agentic-case #jtbd .agentic-jtbd-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+  .agentic-case #problem .agentic-problem-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------------------------------------------------------
+   2) FLORA THINKING SECTION
+   Better side-by-side visualization
+   - note left
+   - image right
+--------------------------------------------------------- */
+
+.agentic-case #agent-behaviour {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(380px, 0.95fr);
+  gap: 0 44px;
+  align-items: start;
+}
+
+.agentic-case #agent-behaviour > .section-kicker,
+.agentic-case #agent-behaviour > h2,
+.agentic-case #agent-behaviour > .agentic-behaviour-grid {
+  grid-column: 1 / -1;
+}
+
+.agentic-case #agent-behaviour > .agentic-thinking-note {
+  grid-column: 1;
+  margin-top: 32px;
+  align-self: center;
+  max-width: 580px;
+}
+
+.agentic-case #agent-behaviour > .wide-photo {
+  grid-column: 2;
+  margin-top: 32px;
+  align-self: center;
+}
+
+.agentic-case #agent-behaviour > .wide-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .agentic-case #problem,
+  .agentic-case #agent-behaviour {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .agentic-case #problem > .section-kicker,
+  .agentic-case #problem > h2,
+  .agentic-case #problem > p,
+  .agentic-case #problem > .choice-list,
+  .agentic-case #problem > .wide-photo,
+  .agentic-case #agent-behaviour > .section-kicker,
+  .agentic-case #agent-behaviour > h2,
+  .agentic-case #agent-behaviour > .agentic-behaviour-grid,
+  .agentic-case #agent-behaviour > .agentic-thinking-note,
+  .agentic-case #agent-behaviour > .wide-photo {
+    grid-column: 1;
+  }
+
+  .agentic-case #problem > .wide-photo,
+  .agentic-case #agent-behaviour > .wide-photo {
+    margin-top: 0;
+    height: auto;
+  }
+
+  .agentic-case #problem > .wide-photo img {
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+/* Actual problem section uses same card system as JTBD */
+.agentic-problem-grid {
+  margin-top: 26px;
+}
+
+.agentic-problem-grid article h3 {
+  margin-top: 0;
+}
+
+.agentic-jtbd-photo {
+  margin-top: 28px;
+}
